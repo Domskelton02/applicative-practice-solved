@@ -6,6 +6,11 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
+  // Use map to transform the array of planets to an array of names
+  return data.planets.map(planet => planet.name);
+
+
+
 }
 
 

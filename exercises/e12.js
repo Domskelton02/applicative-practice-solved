@@ -6,6 +6,13 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
+  // Use the reduce method to sum up the moons count of each planet
+  const totalMoons = data.planets.reduce((sum, planet) => {
+    // Check if moonCount property exists to avoid adding endefined to the sum
+    const moonsCount = planet.moonsCount ? planet.moonsCount : 0;
+    return sum + moonsCount;
+  }, 0);
+  return totalMoons;  
 }
 
 

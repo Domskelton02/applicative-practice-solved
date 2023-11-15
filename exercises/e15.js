@@ -1,3 +1,4 @@
+import { p } from "vitest/dist/index-5aad25c1";
 import { data } from "../data/data";
 
 // SPACE DATA EXERCISE 15
@@ -6,6 +7,12 @@ import { data } from "../data/data";
 
 export function getPlanetsWithNoMoons(data) {
   // Your code goes here...
+  const moonLessPlanets = data.planets.filter(planets.moons === 0); 
+  const planetNames = moonLessPlanets.map(planets => planets.names)
+
+    console.log(moonLessPlanets);
+    return planetNames;
+  
 }
 
 
